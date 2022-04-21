@@ -1,6 +1,6 @@
 {
-  "name": "amazon",
-  "version": "1.0",
+  "name": "chrome-amazon-product-reviews-export",
+  "version": "0.0.1",
   "description": "",
   "permissions": [
     "tabs",
@@ -14,15 +14,6 @@
     "storage",
     "proxy"
   ],
-  "browser_action": {
-    "default_popup": "popup/index.html",
-    "default_icon": {
-      "16": "images/get_started16.png",
-      "32": "images/get_started32.png",
-      "48": "images/get_started48.png",
-      "128": "images/get_started128.png"
-    }
-  },
   "icons": {
     "16": "images/get_started16.png",
     "32": "images/get_started32.png",
@@ -32,7 +23,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://www.amazon.com/product-reviews"
+        "https://www.amazon.com/product-reviews/*"
       ],
       "js": [
         "jquery.js", "content.js"
